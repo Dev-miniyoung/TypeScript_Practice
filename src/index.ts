@@ -1,27 +1,28 @@
-const name = "lee",
-  age = 24,
-  gender = "male";
+class Block {
+  public index: number;
+  public hash: string;
+  public prevHash: string;
+  public data: string;
+  public timestamp: number;
+  constructor(
+    index: number,
+    hash: string,
+    prevHash: string,
+    data: string,
+    timestamp: number
+  ) {
+    this.index = index;
+    this.hash = hash;
+    this.prevHash = prevHash;
+    this.data = data;
+    this.timestamp = timestamp;
+  }
+} // block 구조
 
-interface Human {
-  name: string;
-  age: number;
-  gender: string;
-}
+const genesisBlock: Block = new Block(0, "20202020", "", "First block", 123456);
 
-const person = {
-  name: "min",
-  age: 22,
-  gender: "male"
-};
+let blockchain: [Block] = [genesisBlock];
 
-// const sayHi = (name: string, age: number, gender?: string): string => {
-//   return `Hello ${name}, you are ${age}, you are a ${gender}`;
-// };
-
-const sayHi = (person: Human): string => {
-  return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}`;
-};
-
-console.log(sayHi(person));
+console.log(blockchain);
 
 export {}; // 모듈로 생성
