@@ -12,3 +12,5 @@ basic TypeScript concept study
 
 1. Block index Types
 2. let blockchain: [Block] = [genesisBlock];
+3. yarn add crypto-js : hash 사용
+4. blockchain basic structor
